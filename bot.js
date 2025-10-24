@@ -5,7 +5,7 @@ function createBot() {
   const bot = mineflayer.createBot({
     host: 'gc2.pl',
     port: 25565,
-    username: 'Bot_2137testqqq',
+    username: 'michaleq_YT',
     auth: 'offline'
   })
 
@@ -81,3 +81,4 @@ function createBot() {
 }
 
 createBot()
+
