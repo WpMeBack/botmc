@@ -1,5 +1,4 @@
 const mineflayer = require('mineflayer')
-const { mineflayer: mineflayerViewer } = require('prismarine-viewer')
 
 function createBot() {
   const bot = mineflayer.createBot({
@@ -18,10 +17,6 @@ function createBot() {
       bot.chat('/register 1234 1234')
       setTimeout(() => bot.chat('/login 1234'), 4000)
     }, 2000)
-
-    // podgląd 3D (opcjonalny)
-    mineflayerViewer(bot, { port: 3007, firstPerson: true })
-    console.log('🌍 Podgląd: http://localhost:3007')
   })
 
   bot.on('windowOpen', (window) => {
@@ -56,3 +51,4 @@ function createBot() {
 }
 
 createBot()
+
