@@ -28,6 +28,11 @@ function createBot() {
       if (item) {
         console.log(`🟡 Klikam w slot ${slot}: ${item.name}`)
         bot.clickWindow(slot, 0, 0)
+        setTimeout(() => {
+          bot.look(Math.random() * Math.PI * 2, 0, true)
+          bot.setControlState('forward', true)
+          setTimeout(() => bot.setControlState('forward', false), 1000)
+        }, 3000)
       } else {
         console.log(`⚠️ Slot ${slot} pusty.`)
       }
@@ -51,4 +56,5 @@ function createBot() {
 }
 
 createBot()
+
 
